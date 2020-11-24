@@ -129,7 +129,7 @@ rbac:
 # proxy relates to the proxy pod, the proxy-public service, and the autohttps
 # pod and proxy-http service.
 proxy:
-  secretToken: ''
+  secretToken: '8d851aefe2f2502cea16ede993feacb2bdbe02194af39688fcaa60b96d0cef10'
   annotations: {}
   deploymentStrategy:
     ## type: Recreate
@@ -380,7 +380,7 @@ singleuser:
     limits: {}
     guarantees: {}
   cmd: jupyterhub-singleuser
-  defaultUrl:
+  defaultUrl: '/lab'
   extraPodConfig: {}
   profileList: []
 
@@ -469,7 +469,7 @@ prePuller:
   extraTolerations: []
   # hook relates to the hook-image-awaiter Job and hook-image-puller DaemonSet
   hook:
-    enabled: true
+    enabled: false
     # image and the configuration below relates to the hook-image-awaiter Job
     image:
       name: jupyterhub/k8s-image-awaiter
